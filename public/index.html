@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enrol — Higher Order Education | In-Home Tutoring</title>
+<meta name="description" content="One-on-one in-home tutoring across Greater Sydney with qualified tutors. Maths and Literacy, Pre-K to HSC, tailored to your child. Now enrolling for Term 3.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14233f;          /* deep navy */
+    --ink-soft:#26365a;
+    --amber:#e0a435;        /* achievement gold */
+    --amber-deep:#c4862020;
+    --paper:#f7f3ec;        /* warm off-white */
+    --card:#ffffff;
+    --teal:#3a6b62;         /* quiet secondary */
+    --muted:#5a6477;
+    --line:#e7e0d4;
+    --ink-on-dark:#eef1f7;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Mulish",system-ui,sans-serif;font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.08;margin:0}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ---- top bar ---- */
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(20,35,63,.96);backdrop-filter:blur(6px);color:var(--ink-on-dark)}
+  .topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;max-width:var(--max);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Fraunces",serif;font-weight:600;letter-spacing:.2px}
+  .brand img{height:34px;width:auto;filter:brightness(0) invert(1);opacity:.95}
+  .topbar .meta{display:flex;align-items:center;gap:18px;font-size:14px}
+  .topbar .meta a{text-decoration:none;color:var(--ink-on-dark);opacity:.85}
+  .topbar .meta a:hover{opacity:1}
+  .btn{display:inline-block;background:var(--amber);color:var(--ink);font-weight:700;
+    text-decoration:none;padding:11px 20px;border-radius:999px;font-size:15px;letter-spacing:.2px;
+    transition:transform .15s ease, box-shadow .15s ease;box-shadow:0 6px 18px rgba(224,164,53,.28)}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(224,164,53,.36)}
+  .topbar .phone{font-weight:700;white-space:nowrap}
+  @media(max-width:760px){.topbar .meta .phone,.topbar .meta .sep{display:none}}
+
+  /* ---- hero ---- */
+  .hero{background:var(--ink);color:var(--ink-on-dark);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:
+    radial-gradient(900px 400px at 85% -10%, rgba(224,164,53,.16), transparent 60%);pointer-events:none}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+    padding:64px 24px 72px;max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(238,241,247,.08);
+    border:1px solid rgba(238,241,247,.16);color:var(--ink-on-dark);
+    padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:600;letter-spacing:.3px;margin-bottom:22px}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(224,164,53,.22)}
+  .hero h1{font-size:clamp(2.3rem,4.6vw,3.65rem);letter-spacing:-.5px}
+  .hero h1 .mark{position:relative;white-space:nowrap;color:#fff}
+  .hero h1 .mark::before{content:"";position:absolute;left:-4px;right:-4px;bottom:.06em;height:.46em;
+    background:var(--amber);opacity:.92;border-radius:3px;transform:rotate(-1.4deg);z-index:-1}
+  .hero p.lede{font-size:1.12rem;color:#cdd5e4;max-width:33ch;margin:20px 0 26px}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:14px;color:#b9c2d6}
+  .trust span{display:inline-flex;align-items:center;gap:8px}
+  .trust svg{flex:none}
+  .hero-cta{display:none}
+
+  /* ---- form card ---- */
+  .formcard{background:var(--card);border-radius:16px;padding:10px;box-shadow:0 30px 60px rgba(8,16,33,.35);
+    border:1px solid rgba(255,255,255,.5)}
+  .formcard .head{padding:18px 18px 6px}
+  .formcard .head h2{color:var(--ink);font-size:1.35rem;letter-spacing:-.2px}
+  .formcard .head p{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
+  .formcard iframe{width:100%;min-height:760px;border:none;border-radius:8px;display:block}
+
+  /* ---- section scaffolding ---- */
+  section{padding:74px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+  .sec-h{font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.4px;max-width:18ch}
+  .sec-intro{color:var(--muted);max-width:52ch;margin-top:14px}
+
+  /* reasons */
+  .reasons{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+  .reason{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px}
+  .reason .ic{width:42px;height:42px;border-radius:11px;background:#fbf3e2;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--amber)}
+  .reason h3{font-size:1.16rem;margin-bottom:8px}
+  .reason p{margin:0;font-size:15px;color:var(--muted)}
+
+  /* quals strip */
+  .quals{background:var(--ink);color:var(--ink-on-dark);border-radius:18px;padding:40px;display:grid;grid-template-columns:1.1fr 1.4fr;gap:36px;align-items:center}
+  .quals h2{font-size:1.7rem;color:#fff}
+  .quals p{color:#c2cad9;margin:12px 0 0;font-size:15.5px}
+  .quals ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .quals li{display:flex;gap:14px;align-items:center;font-weight:600}
+  .quals li .tick{flex:none;width:26px;height:26px;border-radius:50%;background:var(--amber);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:14px}
+
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .quote .stars{color:var(--amber);letter-spacing:3px;font-size:14px;margin-bottom:12px}
+  .quote p{margin:0 0 16px;font-size:15.5px;color:#37404f}
+  .quote .who{font-weight:700;font-size:14px;color:var(--ink)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px;counter-reset:s}
+  .step{position:relative;padding-top:8px}
+  .step .n{font-family:"Fraunces",serif;font-size:2.4rem;color:var(--amber);line-height:1;font-weight:600}
+  .step h3{font-size:1.18rem;margin:10px 0 8px}
+  .step p{margin:0;color:var(--muted);font-size:15px}
+
+  .band{background:var(--ink);color:var(--ink-on-dark);text-align:center;border-radius:20px;padding:54px 32px}
+  .band h2{font-size:clamp(1.7rem,3vw,2.3rem);color:#fff;max-width:20ch;margin:0 auto}
+  .band p{color:#c2cad9;margin:16px auto 26px;max-width:46ch}
+
+  footer{background:#0e1a30;color:#aab4c9;font-size:14px;padding:40px 0;margin-top:74px}
+  footer .row{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  footer a{color:#cdd5e4;text-decoration:none}
+
+  :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:920px){
+    .hero .grid{grid-template-columns:1fr;gap:34px;padding:46px 24px 56px}
+    .hero p.lede{max-width:46ch}
+    .reasons{grid-template-columns:repeat(2,1fr)}
+    .quals{grid-template-columns:1fr;padding:30px}
+    .quotes{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+  }
+  @media(max-width:520px){
+    .reasons{grid-template-columns:1fr}
+    section{padding:54px 0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="row">
+    <a class="brand" href="https://higherordereducation.com.au" aria-label="Higher Order Education home">
+      Higher Order Education
+    </a>
+    <nav class="meta" aria-label="Contact">
+      <a class="phone" href="tel:0298713016">02 9871 3016</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="#enrol" class="btn">ENROL NOW</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="grid">
+      <div class="reveal in">
+        <span class="pill"><span class="dot"></span> Now enrolling for Term 3 · Greater Sydney</span>
+        <h1 id="hero-title">Your child, <span class="mark">back on track</span> — at home.</h1>
+        <p class="lede">One-on-one tutoring with qualified tutors in Maths and Literacy, from Pre-K to the HSC — delivered in your own home and tailored to your child.</p>
+        <div class="trust">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e0a435" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg> Qualified Tutors</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e0a435" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg> Current NSW syllabus</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e0a435" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg> One-on-one, in your home</span>
+        </div>
+      </div>
+
+      <!-- FORM CARD -->
+      <div class="formcard reveal in" id="enrol">
+        <div class="head">
+          <h2>Enrol your child</h2>
+          <p>Tell us a little about your child and we'll be in touch within 48 hours to match a tutor.</p>
+        </div>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/fscmIYM7165Ud7JDUPwO"
+          style="width:100%;border:none;border-radius:8px"
+          id="inline-fscmIYM7165Ud7JDUPwO"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="In-Home Tutoring Enrolment"
+          data-height="undefined"
+          data-layout-iframe-id="inline-fscmIYM7165Ud7JDUPwO"
+          data-form-id="fscmIYM7165Ud7JDUPwO"
+          title="In-Home Tutoring Enrolment">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- REASONS -->
+  <section class="wrap" aria-labelledby="why">
+    <span class="eyebrow reveal">Why parents choose us</span>
+    <h2 class="sec-h reveal" id="why">Tutoring built around your child — not a classroom.</h2>
+    <p class="sec-intro reveal">Working one-on-one is the fastest way to find the gaps and close them, so your child keeps pace with the class and grows in confidence.</p>
+    <div class="reasons">
+      <div class="reason reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3L2 8l10 5 10-5-10-5zM6 10v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3>Teaching excellence</h3>
+        <p>Experienced tutors who support each student in a genuine, caring way.</p>
+      </div>
+      <div class="reason reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+        <h3>Thinking skills</h3>
+        <p>Students learn to reason and solve, not rote-learn — so progress sticks.</p>
+      </div>
+      <div class="reason reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.3-7-10a7 7 0 0114 0c0 5.7-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <h3>Early intervention</h3>
+        <p>We catch and reverse learning difficulties early, before confidence slips.</p>
+      </div>
+      <div class="reason reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
+        <h3>Growth mindset</h3>
+        <p>Positive attitudes to learning, perseverance and real goal-setting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFICATIONS -->
+  <section class="wrap" aria-labelledby="quals">
+    <div class="quals reveal">
+      <div>
+        <h2 id="quals">Tutors you can trust in your home.</h2>
+        <p>We're a caring, professional provider developing children's knowledge and skills from Pre-Kindy through to the HSC, following the updated NSW syllabus.</p>
+      </div>
+      <ul>
+        <li><span class="tick">✓</span> Qualified Tutors</li>
+        <li><span class="tick">✓</span> Early Childhood Education qualified</li>
+        <li><span class="tick">✓</span> Years of tutoring experience</li>
+        <li><span class="tick">✓</span> Maths, Literacy &amp; Reading, Pre-K to Year 12</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="wrap" aria-labelledby="love">
+    <span class="eyebrow reveal">From our families</span>
+    <h2 class="sec-h reveal" id="love">Results parents notice in a term.</h2>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <p>The team helped improve my daughter's ability and confidence with any maths task. The way each session uses positive reinforcement and passion is clearly a successful method — and it shows in the results.</p>
+        <div class="who">Helen</div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <p>They nurture the children and make learning fun. My daughter has improved greatly through the year, tackling complex maths and some amazing comprehension work. It has been a joy.</p>
+        <div class="who">Samantha R. — Mum</div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <p>We'd like to thank all the staff for the support and effort they put into our son. The time and care given to each child is amazing.</p>
+        <div class="who">Natasha</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="wrap" aria-labelledby="how">
+    <span class="eyebrow reveal">What happens next</span>
+    <h2 class="sec-h reveal" id="how">From enrolment to first session.</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h3>Enrol online</h3>
+        <p>Fill in the short form with your child's year, subjects and preferred days.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h3>We match a tutor</h3>
+        <p>We pair your child with a tutor suited to their needs and your suburb, then confirm within 48 hours.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h3>First session at home</h3>
+        <p>Your tutor arrives at your home and tailors each session to your child from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING BAND -->
+  <section class="wrap">
+    <div class="band reveal">
+      <h2>Ready to help your child get ahead?</h2>
+      <p>Spots for Term 3 are filling now. Enrol today and we'll be in touch within 48 hours.</p>
+      <a href="#enrol" class="btn">Enrol your child</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div>Higher Order Education — in-home tutoring across the Greater Sydney region.</div>
+    <div>
+      <a href="tel:0298713016">02 9871 3016</a> &nbsp;·&nbsp;
+      <a href="mailto:admin@higherordereducation.com">admin@higherordereducation.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GHL form resizer -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+  (function(){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
