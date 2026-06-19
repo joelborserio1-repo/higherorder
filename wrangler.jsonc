@@ -1,9 +1,0 @@
-{
-  // Cloudflare Workers static-assets config for `npx wrangler deploy`.
-  // https://developers.cloudflare.com/workers/static-assets/
-  "name": "higherorder",
-  "compatibility_date": "2026-06-17",
-  "assets": {
-    "directory": "./public"
-  }
-}
