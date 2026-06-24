@@ -57,6 +57,12 @@
   .btn{display:inline-flex;align-items:center;gap:9px;background:var(--amber);color:var(--ink);font-weight:800;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:16px;border:none;cursor:pointer;margin-top:30px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;font-family:"Mulish",sans-serif}
   .btn:hover{transform:translateY(-1px);background:var(--amber-hi);box-shadow:0 10px 24px rgba(231,165,49,.4)}
 
+  .book{margin-top:48px;padding-top:40px;border-top:1px solid rgba(238,241,247,.12)}
+  .book h2{font-size:clamp(1.5rem,3vw,2rem);color:#fff}
+  .book .book-p{font-size:1.05rem;color:#cdd5e4;max-width:44ch;margin:12px auto 24px}
+  .book .cal{background:#fff;border-radius:14px;padding:8px;box-shadow:0 24px 50px rgba(8,16,33,.4)}
+  .book .cal iframe{width:100%;min-height:680px;border:none;border-radius:8px;display:block}
+
   footer{position:relative;z-index:3;border-top:1px solid rgba(238,241,247,.08);text-align:center;font-size:13.5px;color:#aab4c9;padding:20px}
 
   :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
@@ -119,6 +125,14 @@
       </div>
     </div>
 
+    <div class="book">
+      <h2>Prefer to pick a time now?</h2>
+      <p class="book-p">Skip the wait and book your Term 3 enrolment call straight into our calendar.</p>
+      <div class="cal">
+        <iframe src="https://api.leadconnectorhq.com/widget/bookings/term-3-enrolment-call" scrolling="no" id="term-3-enrolment-call_booking" title="Book your Term 3 enrolment call"></iframe>
+      </div>
+    </div>
+
     <p class="contact">Need to reach us sooner? Call <a href="tel:0298713016">02 9871 3016</a> or email <a href="mailto:admin@higherordereducation.com">admin@higherordereducation.com</a>.</p>
 
     <a class="btn" href="https://higherordereducation.com.au">Visit our website</a>
@@ -129,5 +143,6 @@
   Higher Order Education, in-home tutoring across the Greater Sydney region.
 </footer>
 
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
