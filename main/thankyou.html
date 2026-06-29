@@ -185,5 +185,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .float-contact .fc-call{background:#C92E2A}
   @media(max-width:920px){.float-contact{bottom:84px;right:14px}.float-contact .fc-btn{width:50px;height:50px}}
 </style>
+<!-- Google Ads: phone call click conversion -->
+<script>
+  document.addEventListener('click', function(e){
+    var t = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (t) { gtag('event', 'conversion', {'send_to': 'AW-18271340453/lBseCIvYu8UcEKWPuohE'}); }
+  });
+</script>
 </body>
 </html>
