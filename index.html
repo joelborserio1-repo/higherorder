@@ -104,6 +104,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  .proof b{color:#fff;font-weight:700}
 
  section{padding:96px 0}
+ .stats-band{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center;background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:38px 24px}
+ .stats-band .stat-n{font-family:"Fraunces",serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--teal-deep);font-weight:600;line-height:1}
+ .stats-band .stat-l{color:var(--muted);font-size:14.5px;margin-top:8px;line-height:1.4}
+ @media(max-width:640px){.stats-band{grid-template-columns:1fr;gap:26px}}
  .eyebrow{font-size:13px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;font-family:"DM Sans",sans-serif}
  .sec-h{font-size:clamp(1.9rem,3.1vw,2.7rem);letter-spacing:-.015em;max-width:20ch;font-weight:500}
  .sec-intro{color:var(--muted);max-width:54ch;margin-top:14px}
@@ -283,6 +287,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <span><b>From $72</b> a session</span>
  </div>
  </div>
+
+ <!-- SOCIAL PROOF STATS -->
+ <section class="wrap" aria-label="By the numbers">
+ <div class="stats-band reveal">
+ <div class="stat"><div class="stat-n">145+</div><div class="stat-l">students tutored across Greater Sydney</div></div>
+ <div class="stat"><div class="stat-n">8+ yrs</div><div class="stat-l">helping families with in-home tutoring</div></div>
+ <div class="stat"><div class="stat-n">11</div><div class="stat-l">suburbs covered across Greater Sydney</div></div>
+ </div>
+ </section>
 
  <!-- REASONS -->
  <section class="wrap" aria-labelledby="why">
