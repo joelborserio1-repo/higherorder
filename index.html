@@ -109,6 +109,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  .stats-band .stat-n{font-family:"Fraunces",serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--teal-deep);font-weight:600;line-height:1}
  .stats-band .stat-l{color:var(--muted);font-size:14.5px;margin-top:8px;line-height:1.4}
  @media(max-width:640px){.stats-band{grid-template-columns:1fr;gap:26px}}
+ .subjects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+ .subj-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px}
+ .subj-card h3{font-size:1.16rem;margin-bottom:12px;font-weight:600}
+ .subj-card ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+ .subj-card li{font-size:14.5px;color:var(--muted);padding-left:22px;position:relative}
+ .subj-card li::before{content:"\2713";position:absolute;left:0;color:var(--teal-deep);font-weight:700}
+ .subj-note{margin-top:28px;color:var(--muted);font-size:15px}
+ @media(max-width:920px){.subjects-grid{grid-template-columns:repeat(2,1fr)}}
+ @media(max-width:520px){.subjects-grid{grid-template-columns:1fr}}
  .eyebrow{font-size:13px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;font-family:"DM Sans",sans-serif}
  .sec-h{font-size:clamp(1.9rem,3.1vw,2.7rem);letter-spacing:-.015em;max-width:20ch;font-weight:500}
  .sec-intro{color:var(--muted);max-width:54ch;margin-top:14px}
@@ -326,6 +335,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <p>Early intervention and a growth mindset that show up in class, and on the report card.</p>
  </div>
  </div>
+ </section>
+
+ <!-- SUBJECTS -->
+ <section class="wrap" aria-labelledby="subjects">
+ <span class="eyebrow reveal">Subjects we cover</span>
+ <h2 class="sec-h reveal" id="subjects">From first letters to the HSC, we cover it.</h2>
+ <p class="sec-intro reveal">One-on-one support across every stage, all aligned to the current NSW syllabus. If it is not listed, just ask, we can cover it.</p>
+ <div class="subjects-grid">
+ <div class="subj-card reveal">
+ <h3>Pre-K &amp; Kindergarten</h3>
+ <ul><li>Early literacy &amp; phonics</li><li>Early numeracy</li><li>School readiness</li><li>Confidence &amp; routine</li></ul>
+ </div>
+ <div class="subj-card reveal">
+ <h3>Primary (K&ndash;6)</h3>
+ <ul><li>Mathematics</li><li>English, reading &amp; writing</li><li>Comprehension &amp; spelling</li><li>Science &amp; technology</li></ul>
+ </div>
+ <div class="subj-card reveal">
+ <h3>Secondary (7&ndash;10)</h3>
+ <ul><li>Mathematics</li><li>English</li><li>Science</li><li>HSIE (History &amp; Geography)</li></ul>
+ </div>
+ <div class="subj-card reveal">
+ <h3>Senior &amp; HSC (11&ndash;12)</h3>
+ <ul><li>Maths: Standard, Advanced &amp; Extension</li><li>English: Standard &amp; Advanced</li><li>Biology, Chemistry &amp; Physics</li><li>Business, Economics &amp; more</li></ul>
+ </div>
+ </div>
+ <p class="subj-note reveal">Every subject, every stage, Pre-K to Year 12. Tell us what your child needs when you enrol and we will match the right tutor.</p>
  </section>
 
  <!-- QUALIFICATIONS -->
