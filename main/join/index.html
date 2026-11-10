@@ -19,8 +19,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="/favicon.png">
-<title>Enrol for Term 3 · Higher Order Education | In-Home Tutoring, Greater Sydney</title>
-<meta name="description" content="One-on-one in-home tutoring across Greater Sydney. Maths & Literacy, Pre-K to HSC, tailored to your child. Sessions from as little as $72. Now enrolling for Term 3.">
+<title>Enrol Now · Higher Order Education | In-Home Tutoring, Greater Sydney</title>
+<meta name="description" content="One-on-one in-home tutoring across Greater Sydney. Maths & Literacy, Pre-K to HSC, tailored to your child. Sessions from as little as $72. Now enrolling for this term.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -99,6 +99,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  .formcard .head h2{color:var(--ink);font-size:1.55rem;letter-spacing:-.01em}
  .formcard .head p{margin:7px 0 0;font-size:14.5px;color:var(--muted)}
  .formcard iframe{width:100%;min-height:520px;border:none;border-radius:8px;display:block}
+ /* Web3Forms enquiry form */
+ .w3f{padding:10px 18px 18px;text-align:left}
+ .w3f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ @media(max-width:520px){.w3f-row{grid-template-columns:1fr;gap:0}}
+ .w3f-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+ .w3f-field label{font-size:.88rem;font-weight:600;color:#23292B}
+ .w3f-field input,.w3f-field select{font:inherit;font-size:16px;padding:12px 13px;border:1.5px solid #d6dbdc;border-radius:10px;background:#fff;color:#23292B;width:100%;box-sizing:border-box}
+ .w3f-field input:focus,.w3f-field select:focus{outline:none;border-color:#1597A6;box-shadow:0 0 0 3px rgba(21,151,166,.15)}
+ .w3f-field input.bad{border-color:#C92E2A}
+ .w3f-consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;line-height:1.45;color:#56605f;margin:4px 0 16px;cursor:pointer}
+ .w3f-consent input{margin-top:3px;flex:none;width:18px;height:18px}
+ .w3f-btn{width:100%;border:0;border-radius:999px;background:#C92E2A;color:#fff;font:inherit;font-weight:700;font-size:1.02rem;padding:15px 20px;cursor:pointer;transition:background .15s}
+ .w3f-btn:hover{background:#A8231F}
+ .w3f-btn[disabled]{opacity:.65;cursor:wait}
+ .w3f-msg{margin:10px 0 0;font-size:.88rem;color:#C92E2A;min-height:1em}
+ .w3f-hp{display:none!important}
+
 
  /* proof bar */
  .proof{background:#1b2426;color:#cdd5e4;border-top:1px solid rgba(255,255,255,.06);position:relative;z-index:2}
@@ -219,7 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="row">
  <a class="brand" href="https://higherordereducation.com.au" aria-label="Higher Order Education home">Higher Order Education</a>
  <nav class="meta" aria-label="Contact">
- <a class="phone" href="tel:+61468089048">+61 468 089 048</a>
+ <a class="phone" href="tel:+61401214350">0401 214 350</a>
  <span class="sep" aria-hidden="true">·</span>
  <a href="#enrol" class="btn">ENROL NOW</a>
  </nav>
@@ -244,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
  <div class="grid">
  <div class="reveal in">
- <span class="pill"><span class="dot"></span> Now enrolling for Term 3 · Limited spots per area</span>
+ <span class="pill"><span class="dot"></span> Now enrolling · Limited spots per area</span>
  <h1 id="hero-title">Help your child catch up, keep up, and <span class="mark">get ahead<svg class="scribble" viewBox="0 0 240 24" preserveAspectRatio="none"><path pathLength="1" d="M5 16 C 55 7, 120 21, 180 11 C 205 7, 222 12, 235 9"/></svg></span>.</h1>
  <p class="lede">One-on-one tutoring with qualified tutors in Maths &amp; Literacy, Pre-K to the HSC, delivered in your own home, across Sydney and surrounds.</p>
  <div class="price">
@@ -254,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="price-sub">10% off your first term, then $80 a session</div>
  <div class="hero-cta">
  <a href="#enrol" class="btn lg">Book your free assessment <span class="arr" aria-hidden="true">→</span></a>
- <a href="tel:+61468089048" class="btn lg btn-line">Call now</a>
+ <a href="tel:+61401214350" class="btn lg btn-line">Call now</a>
  <span class="micro">Free in-home assessment · We reply within 48 hours</span>
  <svg class="cue" viewBox="0 0 120 80" aria-hidden="true"><path pathLength="1" d="M6 20 C 40 4, 80 6, 104 34 M104 34 L92 26 M104 34 L98 48"/></svg>
  </div>
@@ -271,25 +288,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <span class="ribbon">Free In-Home Assessment</span>
  <h2>Book your free in-home assessment</h2>
  <p>Tell us about your child and we'll arrange a free, no-obligation in-home assessment. We reply within 48 hours.</p>
- <p class="form-urgent">Only a few assessment spots left per area this Term 3.</p>
+ <p class="form-urgent">Only a few assessment spots left per area this term.</p>
  </div>
- <iframe
- src="https://api.leadconnectorhq.com/widget/form/7AL3q6dKICF1znX1bjqg"
- style="width:100%;border:none;border-radius:8px"
- id="inline-7AL3q6dKICF1znX1bjqg"
- data-layout="{'id':'INLINE'}"
- data-trigger-type="alwaysShow"
- data-trigger-value=""
- data-activation-type="alwaysActivated"
- data-activation-value=""
- data-deactivation-type="neverDeactivate"
- data-deactivation-value=""
- data-form-name="Child Enquiry Form"
- data-height="900"
- data-layout-iframe-id="inline-7AL3q6dKICF1znX1bjqg"
- data-form-id="7AL3q6dKICF1znX1bjqg"
- title="Child Enquiry Form">
- </iframe>
+ <form class="w3f" id="enrol-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+ <input type="hidden" name="access_key" value="c86f1281-68e3-450e-85bc-7e4ecea3a2f2">
+ <input type="hidden" name="subject" value="New enquiry: Child Enquiry Form (Higher Order Education)">
+ <input type="hidden" name="from_name" value="Higher Order Education website">
+ <input type="hidden" name="redirect" value="/thankyou.html">
+ <input type="hidden" name="page" value="">
+ <input type="checkbox" name="botcheck" class="w3f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+ <div class="w3f-row">
+  <div class="w3f-field"><label for="w3f-first">First Name</label><input id="w3f-first" name="first_name" type="text" placeholder="Enter your first name" autocomplete="given-name"></div>
+  <div class="w3f-field"><label for="w3f-last">Last Name</label><input id="w3f-last" name="last_name" type="text" placeholder="Enter your last name" autocomplete="family-name"></div>
+ </div>
+ <div class="w3f-field"><label for="w3f-phone">Phone <span aria-hidden="true">*</span></label><input id="w3f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="04xx xxx xxx"></div>
+ <div class="w3f-field"><label for="w3f-email">Email <span aria-hidden="true">*</span></label><input id="w3f-email" name="email" type="email" required autocomplete="email" placeholder="your@email.com"></div>
+ <div class="w3f-field"><label for="w3f-suburb">Suburb</label><input id="w3f-suburb" name="suburb" type="text" placeholder="e.g. Sydney 2000" autocomplete="address-level2"></div>
+ <div class="w3f-field"><label for="w3f-student">Student First Name</label><input id="w3f-student" name="student_first_name" type="text"></div>
+ <div class="w3f-row">
+  <div class="w3f-field"><label for="w3f-year">School Year</label><select id="w3f-year" name="school_year"><option value="">Select…</option><option value="Pre-K">Pre-K</option><option value="Kindergarten">Kindergarten</option><option value="Year 1">Year 1</option><option value="Year 2">Year 2</option><option value="Year 3">Year 3</option><option value="Year 4">Year 4</option><option value="Year 5">Year 5</option><option value="Year 6">Year 6</option><option value="Year 7">Year 7</option><option value="Year 8">Year 8</option><option value="Year 9">Year 9</option><option value="Year 10">Year 10</option><option value="Year 11">Year 11</option><option value="Year 12">Year 12</option></select></div>
+  <div class="w3f-field"><label for="w3f-subject">Subject(s)</label><select id="w3f-subject" name="subjects"><option value="">Select…</option><option value="Maths">Maths</option><option value="English / Literacy">English / Literacy</option><option value="Maths & English">Maths & English</option><option value="Reading & Writing">Reading & Writing</option><option value="Science">Science</option><option value="Selective / OC preparation">Selective / OC preparation</option><option value="NAPLAN preparation">NAPLAN preparation</option><option value="HSC subjects">HSC subjects</option><option value="Other">Other</option></select></div>
+ </div>
+ <label class="w3f-consent"><input type="checkbox" name="sms_consent" value="Yes"> <span>By checking this box, I consent to receive non-marketing text messages from Higher Order Education about my enquiry. Message frequency varies; message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span></label>
+ <button type="submit" class="w3f-btn">Book my free assessment</button>
+ <p class="w3f-msg" role="status" aria-live="polite"></p>
+</form>
  </div>
  </div>
  </section>
@@ -432,7 +455,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </div>
  </div>
  <div style="text-align:center;margin-top:36px" class="reveal">
- <a href="#enrol" class="btn lg">Enrol for Term 3 <span class="arr" aria-hidden="true">→</span></a>
+ <a href="#enrol" class="btn lg">Enrol now <span class="arr" aria-hidden="true">→</span></a>
  </div>
  </section>
 
@@ -470,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </details>
  <details>
  <summary>When can we start? <span class="plus" aria-hidden="true">+</span></summary>
- <div class="ans">We're enrolling now for Term 3 (starts 21 July). Spots per area are limited, so earlier enrolments get first pick of days and times.</div>
+ <div class="ans">We enrol at the start of every school term, and can often start mid-term if there's a tutor available in your area. Spots per area are limited, so earlier enrolments get first pick of days and times.</div>
  </details>
  </div>
  </section>
@@ -478,7 +501,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <!-- CLOSING BAND -->
  <section class="wrap">
  <div class="band reveal">
- <h2>Spots for Term 3 are filling. Enrol today.</h2>
+ <h2>Spots this term are filling. Enrol today.</h2>
  <p>Take two minutes now and we'll match your child with the right tutor, then be in touch within 48 hours.</p>
  <a href="#enrol" class="btn lg">Enrol your child <span class="arr" aria-hidden="true">→</span></a>
  </div>
@@ -489,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="wrap row">
  <div>Higher Order Education, in-home tutoring across the Greater Sydney region.</div>
  <div>
- <a href="tel:+61468089048">+61 468 089 048</a> &nbsp;·&nbsp;
+ <a href="tel:+61401214350">0401 214 350</a> &nbsp;·&nbsp;
  <a href="mailto:admin@higherordereducation.com">admin@higherordereducation.com</a>
  </div>
  </div>
@@ -497,11 +520,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- sticky mobile CTA -->
 <div class="sticky-cta">
- <div class="label">Enrolling for Term 3<small>Sessions from $72</small></div>
+ <div class="label">Now enrolling<small>Sessions from $72</small></div>
  <a href="#enrol" class="btn">ENROL NOW</a>
 </div>
 
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 <script>
  (function(){
  var io = new IntersectionObserver(function(entries){
@@ -512,7 +534,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 <!-- Floating contact buttons -->
 <div class="float-contact" aria-label="Quick contact">
-  <a class="fc-btn fc-call" href="tel:+61468089048" aria-label="Call us" title="Call us">
+  <a class="fc-btn fc-call" href="tel:+61401214350" aria-label="Call us" title="Call us">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
   </a>
 </div>
@@ -529,6 +551,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var t = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
     if (t) { gtag('event', 'conversion', {'send_to': 'AW-18271340453/lBseCIvYu8UcEKWPuohE'}); }
   });
+</script>
+<script>
+/* Web3Forms submit: validate, post via fetch, fire conversion, go to thank-you page */
+(function(){
+ var f = document.getElementById('enrol-form'); if(!f) return;
+ var msg = f.querySelector('.w3f-msg'), btn = f.querySelector('.w3f-btn');
+ f.page.value = location.href;
+ f.addEventListener('submit', function(e){
+  e.preventDefault(); msg.textContent = '';
+  var bad = null;
+  ['phone','email'].forEach(function(n){ var el=f[n]; var ok = el.value.trim() && el.checkValidity(); el.classList.toggle('bad', !ok); if(!ok && !bad) bad = el; });
+  if(bad){ msg.textContent = 'Please enter a valid phone number and email.'; bad.focus(); return; }
+  btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…';
+  var data = Object.fromEntries(new FormData(f));
+  data.name = ((data.first_name||'') + ' ' + (data.last_name||'')).trim();
+  fetch('https://api.web3forms.com/submit', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data)})
+   .then(function(r){ return r.json(); })
+   .then(function(res){
+    if(!res.success) throw new Error(res.message || 'failed');
+    window.dataLayer = window.dataLayer || []; dataLayer.push({event:'form_submit', form_name:'Child Enquiry Form'});
+    location.href = '/thankyou.html';
+   })
+   .catch(function(){ btn.disabled = false; btn.textContent = label; msg.textContent = 'Sorry, something went wrong. Please call us on 0401 214 350.'; });
+ });
+})();
 </script>
 </body>
 </html>
